@@ -22,7 +22,7 @@
             <a class="nav-link" href="about.html">О Седоне</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-current" href="hotels.html">Гостиницы</a>
+            <a class="nav-link nav-link-current">Гостиницы</a>
           </li>
         </ul>
         <!--Навигация пользователя-->
@@ -114,7 +114,7 @@
       <!--Сортировка гостиниц-->
       <section class="sorting">
         <h2 class="visually-hidden">Сортировка результатов</h2>
-        <p class="sorting-title">Найдено гостиниц: 38</p>
+        <p class="sorting-title">Найдено гостиниц: <span class="sorting-result">38</span></p>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
@@ -122,19 +122,19 @@
         </select>
         <ul class="sorting-list">
           <li class="sorting-item">
-            <a class="button" href="#">
+            <button class="button" type="button">
               <span class="visually-hidden">Показать список плиткой</span>
-            </a>
+            </button>
           </li>
           <li class="sorting-item">
-            <a class="button" href="#">
+            <button class="button" type="button">
               <span class="visually-hidden">Показать слайдами</span>
-            </a>
+            </button>
           </li>
           <li class="sorting-item">
-            <a class="button" href="#">
+            <button class="button" type="button">
               <span class="visually-hidden">Показать списоком</span>
-            </a>
+            </button>
           </li>
         </ul>
       </section>
