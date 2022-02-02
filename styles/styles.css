@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block;
+  user-select: none;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* Pages */
+.header {
+  color: #000000;
+  background: #ffffff;
+}
+
+.nav-list {
+  list-style-type: none;
+}
+
+.nav-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.welcome {
+  background-image: url("../images/background-welcome.jpg");
+  background-size: 1200px 485px;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Advantages */
+
+.advantages {
+  text-align: center;
+}
+
+.sedona-text {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.advantages-item-white {
+  color: #ffffff;
+  background-color: #83B3D3;
+}
+
+.advantages-item-light {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-dark {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item:nth-child(3) {
+  background-image: url("../images/housing.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages-item:nth-child(4) {
+  background-image: url("../images/food.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages-item:nth-child(5) {
+  background-image: url("../images/souvenirs.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages-list {
+  list-style-type: none;
+}
+
+.hotels-search-title {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.hotels-search {
+
+  text-align: center;
+}
+
+.hotels-description {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.subscription {
+  color: #ffffff;
+  text-align: center;
+  background-color: #93adba;
+  background-image: url("../images/background-subscription.jpg");
+  background-repeat: no-repeat;
+}
+
+.subscription-description {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.footer-social-list {
+  list-style-type: none;
+}
+
+.filters {
+  color: #ffffff;
+  background-color: #83B3D3;
+  background-image: url("../images/background-catalog.jpg");
+  background-repeat: no-repeat;
+}
+
+.main-inner-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  list-style-type: none;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
+}
+
+.control-input {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.sorting-title {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hotels-list {
+  list-style-type: none;
+}
+
+.hotels-card-link {
+  text-decoration: none;
+}
+
+.hotels-card-title {
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.hotels-card-type {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.hotels-card-price {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.rating {
+  font-size: 16px;
+  line-height: 21px;
+  background-color: #F2F2F2;
+  text-transform: uppercase;
+}
+
+/* Пагинация*/
+.pagination-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83b3d3;
+  text-decoration: none;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.input-number-title {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.subscription-catalog {
+  color: #000000;
+}
+
+.form-input {
+  font-size: 18px;
+  line-height: 26px;
+}
