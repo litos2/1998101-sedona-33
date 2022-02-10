@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: local("PT Sans"),
-        url("fonts/ptsans-400.woff2") format("woff2");
+        url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 700;
   src: local("PT Sans"),
-        url("fonts/ptsans-700.woff2") format("woff2");
+        url("../fonts/fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -71,14 +71,12 @@ body {
 
 .navigation-logo {
   display: block;
-  width: 139px;
   margin-right: 47px;
 }
 
 /*С запасом на доп. пункт меню*/
 .nav-list {
   display: flex;
-  width: 450px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -95,7 +93,6 @@ body {
 
 /*Навигация пользователя с запасом на доп. элемент*/
 .nav-user {
-  width: 300px;
   margin-left: auto;
 }
 
