@@ -140,20 +140,23 @@
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>
             </select>
-            <div class="sorting-button">
-              <ul class="sorting-list">
-                <li class="sorting-item">
-                  <button class="button" type="button">
+            <div class="sorting-view-type">
+              <ul class="sorting-view-type-list">
+                <li class="sorting-view-type-item">
+                  <button class="button-view-type button-view-type-selected" type="button">
+                    <img src="images/mode-tile.svg" alt="">
                     <span class="visually-hidden">Показать список плиткой</span>
                   </button>
                 </li>
-                <li class="sorting-item">
-                  <button class="button" type="button">
+                <li class="sorting-view-type-item">
+                  <button class="button-view-type" type="button">
+                    <img src="images/mode-slideshow.svg" alt="">
                     <span class="visually-hidden">Показать слайдами</span>
                   </button>
                 </li>
-                <li class="sorting-item">
-                  <button class="button" type="button">
+                <li class="sorting-view-type-item">
+                  <button class="button-view-type" type="button">
+                    <img src="images/mode-list.svg" alt="">
                     <span class="visually-hidden">Показать списоком</span>
                   </button>
                 </li>
@@ -215,7 +218,9 @@
                 <p class="rating">Рейтинг:9,2</p>
               </li>
             </ul>
-            <button class="button button-show-more" type="button">Загрузить еще</button>
+            <div class="show-more-container">
+              <button class="button button-show-more" type="button">Загрузить еще</button>
+            </div>
           </div>
         </section>
         <!--Пагинатор-->
