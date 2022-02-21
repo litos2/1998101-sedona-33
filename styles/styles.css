@@ -600,7 +600,7 @@ body {
 
 .hotels-list {
   display: grid;
-  grid-template-columns: repeat(3, 340px);
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
   margin: 0;
   margin-bottom: 34px;
@@ -611,10 +611,13 @@ body {
 /* Карточка */
 .hotels-card {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+}
+
+.hotels-card-image {
+  margin-bottom: 16px;
 }
 
 .hotels-card-link {
@@ -625,31 +628,30 @@ body {
   font-size: 24px;
   line-height: 31px;
   color: #000000;
+  margin-top: 0;
 }
 
 .hotels-card-container {
-  display: flex;
-  width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 100%;
   margin-bottom: 16px;
 }
 
 .hotels-card-type {
   font-size: 18px;
   line-height: 24px;
-  width: 133px;
-  margin-right: 25px;
 }
 
 .hotels-card-price {
   font-size: 18px;
   line-height: 24px;
-  width: 143px;
   text-align: start;
 }
 
 .card-button {
   display: flex;
-  width: 300px;
   margin-bottom: 16px;
 }
 
@@ -686,8 +688,8 @@ body {
 
 .rating {
   display: flex;
-  width: 300px;
   justify-content:space-between;
+  align-items: center;
 }
 
 .two-stars {
@@ -696,6 +698,7 @@ body {
   background-image: url("../images/star.svg");
   background-size: 18px 17px;
   background-repeat: space;
+  margin-right: 97px;
 }
 
 .three-stars {
@@ -705,6 +708,7 @@ body {
   background-image: url("../images/star.svg");
   background-size: 18px 17px;
   background-repeat: space;
+  margin-right: 72px;
 }
 
 .four-stars {
@@ -713,6 +717,7 @@ body {
   background-image: url("../images/star.svg");
   background-size: 18px 17px;
   background-repeat: space;
+  margin-right: 49px;
 }
 
 .hotels-card-rating {
