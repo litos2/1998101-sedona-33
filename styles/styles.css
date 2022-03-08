@@ -572,6 +572,7 @@ body {
   background-color: #83b3d3;
   background-image: url("../images/background-search.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 35px;
   padding-left: 71px;
   padding-right: 72px;
@@ -599,7 +600,6 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  padding-bottom: 45px;
   list-style: none;
 }
 
@@ -621,25 +621,31 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 0;
-  padding-bottom: 83px;
 }
 
 .catalog-filter {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 45px;
+  padding-bottom: 83px;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  padding-bottom: 30px;
 }
 
 .catalog-filter-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  padding-bottom: 13px;
 }
 
 .catalog-filter-group {
@@ -649,56 +655,223 @@ body {
 }
 
 .control {
+  position: relative;
   font-size: 18px;
   line-height: 23px;
+  padding-left: 39px;
 }
 
-/* Range */
-.catalog-filter-group:nth-child(3){
-  margin-right: 81px;
+.filter-control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  outline: none;
 }
-.range-wrapper-inputs{
+
+.checkbox-mark {
+  border-radius: 4px;
+}
+
+.checkbox-mark:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-input:focus + .checkbox-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.control-input:active + .checkbox-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:checked + .filter-control-mark::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 13px;
+  height: 10px;
+  background-image: url("../images/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 10px;
+}
+
+.radio-mark {
+  border-radius: 50%;
+}
+
+.radio-mark:hover {
+  background-color: #ffffff;
+}
+
+.radio-button-input:checked:focus + .radio-mark {
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.radio-button-input:focus + .radio-mark {
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.radio-button-input:active + .radio-mark {
+  background-color: #ffffff;
+}
+
+.radio-button-input:checked + .filter-control-mark::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+}
+
+/* Фильтр по цене*/
+.price-container {
   display: flex;
+  box-sizing: border-box;
   width: 287px;
   height: 48px;
-  box-sizing: border-box;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
-.catalog-filter-label{
-  display: flex;
-  align-items: center;
-  font: inherit;
-  color: rgba(255, 255, 255, 0.3);
+.price-input-container {
+  position: relative;
+}
+
+.price-input-container:last-child {
+  margin-left: -2px;
+}
+
+.field-input {
   box-sizing: border-box;
-  width: 143px;
+  padding: 10px 19px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  border: none;
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+.price-input {
+  width: 145px;
   height: 48px;
-  padding: 0 20px;
+  padding-left: 16px;
+  padding-right: 40px;
+  line-height: 23px;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
 }
 
-.catalog-filter-label:first-of-type{
-  border: 2px solid   #fff;
-  border-radius: 4px 0 0 4px;
-  border-right: none;
+.price-input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
 }
-.catalog-filter-label:last-of-type{
-  border: 2px solid #FFFFFF;
+
+.price-input:focus {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
+  background: transparent;
+}
+
+.price-input:active {
+  background-color: #756257;
+  box-shadow: none;
+  border: 2px solid #ffffff;
+}
+
+.price-input-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.price-input-max {
+  width: 144px;
   border-radius: 0 4px 4px 0;
 }
-.catalog-filter-input{
-  width: 80px;
-  padding: 0;
-  font: inherit;
-  color:#FFFFFF;
-  border:none;
-  background-color: transparent;
-  appearance: textfield;
+
+.price-input-label {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  margin-top: -12px;
+  opacity: 0.3;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+/* Шкала цены */
+.price-range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-range-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.price-range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.price-range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.price-range-toggle:focus {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0,25);
+  outline: 3px solid #83b3d3;
+}
+
+.price-range-toggle:active {
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0,4);
+  outline: 2px solid #83b3d3;
 }
 
 .button-filter-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding-top: 60px;
 }
 
 .button-apply {
@@ -716,6 +889,21 @@ body {
   margin-bottom: 20px;
 }
 
+.button-apply:hover {
+  background-color: #68a2ca;
+}
+
+.button-apply:focus {
+  background-color: #68a2ca;
+  outline: 3px solid #ffffff;
+}
+
+.button-apply:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68a2ca;
+  border: none;
+}
+
 .button-reset {
   min-width: 160px;
   min-height: 23px;
@@ -729,6 +917,19 @@ body {
   padding: 0;
   border: 0;
   background-color: transparent;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-reset:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.button-reset:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .sorting-container {
