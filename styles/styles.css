@@ -58,7 +58,7 @@ body {
   overflow: hidden;
 }
 
-/* Pages */
+/* Шапка сайта */
 .header {
   color: #000000;
   background-color: #ffffff;
@@ -88,13 +88,13 @@ body {
 }
 
 .nav-link {
+  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  font-weight: 700;
+  text-decoration: none;
   text-align: center;
   color: #000000;
   background-color: #ffffff;
-  text-decoration: none;
   margin: 20px 17px;
 }
 
@@ -107,7 +107,7 @@ body {
   padding-bottom: 17px;
 }
 
-/*Навигация пользователя с запасом на доп. элемент*/
+/*Навигация пользователя*/
 .nav-user {
   margin-left: auto;
 }
@@ -126,9 +126,9 @@ body {
   width: 20px;
   height: 20px;
   text-align: center;
+  font-weight: 400;
   font-size: 10px;
   line-height: 13px;
-  font-weight: 400;
   color: #FFFFFF;
   background-color: #7db54f;
   border-radius: 50%;
@@ -138,7 +138,7 @@ body {
   min-width: 18px;
   min-height: 18px;
   margin: 0;
-  padding: 20px 11px;
+  padding: 19px 11px;
 }
 
 .nav-user-link:hover svg {
@@ -157,8 +157,8 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
-  border-radius: 4px;
   text-decoration: none;
+  border-radius: 4px;
   background-color: #83b3d3;
   color: #ffffff;
   cursor: pointer;
@@ -233,9 +233,9 @@ body {
 .welcome-title {
   display: block;
   text-align: center;
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  font-weight: 700;
   color: #000000;
   text-transform: uppercase;
   margin-bottom: 31px;
@@ -243,9 +243,9 @@ body {
 
 .sedona-text {
   margin: 0;
+  font-weight: 400;
   font-size: 22px;
   line-height: 36px;
-  font-weight: 400;
   background-color: #ffffff;
   color: #333333;
 }
@@ -309,9 +309,9 @@ body {
   margin: 0;
   width: 400px;
   padding: 98px 0 29px 0;
+  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  font-weight: 700;
   color: #000000;
   text-transform: uppercase;
 }
@@ -360,9 +360,9 @@ body {
 .hotels-search-title {
   display: block;
   padding: 91px 240px 29px;
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  font-weight: 700;
   color: #000000;
   background-color: #ffffff;
   text-transform: uppercase;
@@ -370,15 +370,15 @@ body {
 
 .hotels-description {
   margin: 0;
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
 }
 
 .button-search {
+  font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  font-weight: 700;
   margin: 56px 312px 93px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -413,17 +413,17 @@ body {
 
 .subscription-title {
   padding: 94px 240px 29px;
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .subscription-description {
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
   margin: 0;
   padding: 0 240px;
 }
@@ -443,9 +443,9 @@ body {
 }
 
 .subscription-button {
+  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  font-weight: 700;
   text-align: center;
   color:#ffffff;
   background-color: #83b3d3;
@@ -466,6 +466,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+/* Подвал сайта */
 .footer {
   display: flex;
   padding: 40px 72px;
@@ -564,6 +565,307 @@ body {
   opacity: 0.3;
 }
 
+/* Модальное окно */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  /* display: none; */
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 70px;
+  padding-top: 62px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px #00000026;
+}
+
+.modal-search-hotels {
+  width: 715px;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e5e5e5;
+}
+
+.modal-close-button:focus {
+  outline: none;
+  background-color: #e5e5e5;
+  border: 3px solid #83b3d3;
+}
+
+.date-form .field-group {
+  position: relative;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.date-form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  flex-shrink: 0;
+  width: 155px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.field-date {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.field-date:hover {
+  background-color: #e5e5e5;
+}
+
+.field-date:focus {
+  background-color: #e5e5e5;
+  outline: 3px solid #83b3d3;
+}
+
+.field-date::placeholder,
+.field-guests::placeholder {
+  color: #000000;
+}
+
+.button-date {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 19px;
+  border: none;
+  background-image: url("../images/icon-calendar.svg");
+  background-repeat: no-repeat;
+  opacity: 30%;
+  cursor: pointer;
+}
+
+.message {
+  position: absolute;
+  left: 155px;
+  bottom: -29px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.message-error {
+  color: #ff5757;
+}
+
+.wrapper-field-group {
+  display: flex;
+}
+
+.label-children {
+  width: 54px;
+  margin-left: 56px;
+}
+
+.field-guests {
+  flex-grow: 1;
+  width: 44px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.form-counter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 133px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.button-counter {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin: 0 7px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  background-position: center;
+  cursor: pointer;
+}
+
+.button-counter::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 30%;
+}
+
+.button-minus::after {
+  background-image: url("../images/icon-minus.svg");
+  content: "";
+}
+
+.button-plus::after {
+  background-image: url("../images/icon-plus.svg");
+  content: "";
+}
+
+.button-minus:hover::after,
+.button-plus:hover::after {
+  opacity: 100%;
+}
+
+.button-minus:focus,
+.button-plus:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+}
+
+.tooltip {
+  position: relative;
+  margin-right: 18px;
+}
+
+.tooltip-toggle {
+  display: block;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  background-color: #83b3d3;
+  background-image: url("../images/icon-info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tooltip-toggle:hover {
+  background-color: #68a2ca;
+}
+
+.tooltip-toggle:focus {
+  outline: 3px solid #756257;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  z-index: 1;
+  display: none;
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #333333;
+  transform: translateX(-50%);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-text::after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 19px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../images/icon-tooltip.svg");
+  transform: translateX(-50%);
+  content: "";
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.button-modal {
+  width: 575px;
+  min-height: 60px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 0;
+  background-color: #83b3d3;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.button-modal:hover {
+  background-color: #68a2ca;
+}
+
+.button-modal:focus {
+  background-color: #68a2ca;
+  outline: 3px solid #756257;
+}
+
+.button-modal:active {
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+/* Блок фильтров поиска гостиниц */
 .filters {
   display: flex;
   flex-direction: column;
@@ -592,12 +894,12 @@ body {
   padding-bottom: 5px;
 }
 
-/* Breadcrumbs */
+/* Хлебные крошки */
 .breadcrumbs {
   display: flex;
+  font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-  font-weight: 400;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -632,9 +934,9 @@ body {
 }
 
 .catalog-filter-title {
+  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  font-weight: 700;
   padding-bottom: 30px;
 }
 
@@ -659,6 +961,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   padding-left: 39px;
+  cursor: pointer;
 }
 
 .filter-control-mark {
@@ -679,9 +982,14 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input:focus + .checkbox-mark {
+.control-input:focus:not(:focus-visible) + .checkbox-mark {
+  background-color: #ffffff;
+  outline: none;
+}
+
+.control-input:focus-visible + .checkbox-mark {
   background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 0 0 3px #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .control-input:active + .checkbox-mark {
@@ -805,6 +1113,7 @@ body {
   opacity: 0.3;
 }
 
+/* Убираем стрелки в input */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -932,6 +1241,7 @@ input[type="number"]:focus {
   outline: none;
 }
 
+/* Блок сортировки гостиниц */
 .sorting-container {
   display: flex;
   justify-content: space-between;
@@ -945,9 +1255,9 @@ input[type="number"]:focus {
 }
 
 .sorting-title {
+  font-weight: 700;
   font-size: 30px;
   line-height: 39px;
-  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -994,8 +1304,8 @@ input[type="number"]:focus {
   height: 48px;
   background-color: #ffffff;
   border: 2px solid #e6e6e6;
-  box-sizing: border-box;
   border-radius: 4px;
+  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -1010,6 +1320,7 @@ input[type="number"]:focus {
   border-color: #000000;
 }
 
+/* Блок карточек гостиниц */
 .hotels-catalog-container {
   margin: 0 auto;
   padding-left: 72px;
@@ -1318,6 +1629,7 @@ input[type="number"]:focus {
   outline: 2px solid #e6e6e6;
 }
 
+/* Блок подписки */
 .subscription-catalog {
   display: flex;
   flex-direction: column;
