@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
@@ -100,17 +100,17 @@
             <li class="advantages-item advantages-item-light">
               <h3 class="advantages-title">Небольшая<br> площадь</h3>
               <span class="advantages-number">— №3 —</span>
-              <p class="advantages-description">Все достопримечательности находятся очень близко</p>
+              <p class="advantages-description-number">Все достопримечательности<br> находятся очень близко</p>
             </li>
             <li class="advantages-item advantages-item-dark">
               <h3 class="advantages-title">Красивая<br> дорога</h3>
               <span class="advantages-number">— №4 —</span>
-              <p class="advantages-description">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
+              <p class="advantages-description-number">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
             </li>
             <li class="advantages-item advantages-item-light">
               <h3 class="advantages-title">Мало<br> туристов</h3>
               <span class="advantages-number">— №5 —</span>
-              <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
+              <p class="advantages-description-number">Большинство едет в Гранд<br> Каньон и толпится там</p>
             </li>
           </ul>
         </section>
@@ -119,7 +119,7 @@
           <div class="hotels-search-container">
             <h2 class="visually-hidden">Поиск гостиницы</h2>
             <b class="hotels-search-title">Заинтересовались?</b>
-            <p class="hotels-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <p class="hotels-description">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <a class="button-search button-brown" href="catalog.html">Поиск гостиницы в Седоне</a>
           </div>
         </section>
@@ -164,7 +164,7 @@
           </li>
         </ul>
         <div class="footer-phone">
-          <a class="footer-contact-phone" href="tel:88128121212">+7 812 812-12-12</a>
+          <a class="footer-contact-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
         </div>
         <a class="footer-copyright" href="https://htmlacademy.ru/">
           <svg class="footer-copyright-image" width="115" height="34" fill="#000" xmlns="http://www.w3.org/2000/svg">
@@ -181,59 +181,57 @@
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
-        <div class="modal-content">
-          <form class="date-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group date-form-check">
-              <label class="form-label" for="check-in-date">Дата заезда:</label>
-              <input class="field-date" type="text" id="check-in-date" name="check-in-date" placeholder="27 апреля 2020">
-              <button class="button-date" type="button">
-                <span class="visually-hidden">Выбор даты</span>
-              </button>
-              <span class="message message-error">Мы не можем отправить вас в прошлое.</span>
-            </p>
-            <p class="field-group date-form-check">
-              <label class="form-label" for="check-out-date">Дата выезда</label>
-              <input class="field-date" type="text" id="check-out-date" name="check-out-date" placeholder="1 сентября 2021">
-              <button class="button-date" type="button">
-                <span class="visually-hidden">Выбор даты</span>
-              </button>
-              <span class="message">На эти даты есть свободные номера. Пока есть.</span>
-            </p>
-            <div class="wrapper-field-group">
-              <div class="field-group date-form-check">
-                <label class="form-label" for="number-of-adults">Взрослые:</label>
-                <div class="form-counter-wrapper">
-                  <button class="button-counter button-minus" type="button">
-                    <span class="visually-hidden">Минус</span>
-                  </button>
-                  <input class="field-guests" type="text" id="number-of-adults" name="number-of-adults" placeholder="2">
-                  <button class="button-counter button-plus" type="button">
-                    <span class="visually-hidden">Плюс</span>
-                  </button>
-                </div>
-              </div>
-              <div class="field-group date-form-check">
-                <label class="form-label label-children" for="number-of-children">Дети:</label>
-                <div class="tooltip">
-                  <button class="tooltip-toggle" type="button">
-                    <span class="visually-hidden">Информация</span>
-                  </button>
-                  <p class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
-                </div>
-                <div class="form-counter-wrapper">
-                  <button class="button-counter button-minus" type="button">
-                    <span class="visually-hidden">Минус</span>
-                  </button>
-                  <input class="field-guests" type="text" id="number-of-children" name="number-of-children" placeholder="1">
-                  <button class="button-counter button-plus" type="button">
-                    <span class="visually-hidden">Плюс</span>
-                  </button>
-                </div>
+        <form class="date-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group date-form-check">
+            <label class="form-label" for="check-in-date">Дата заезда:</label>
+            <input class="field-date" type="text" id="check-in-date" name="check-in-date" placeholder="27 апреля 2020">
+            <button class="button-date" type="button">
+              <span class="visually-hidden">Выбор даты</span>
+            </button>
+            <span class="message message-error">Мы не можем отправить вас в прошлое.</span>
+          </p>
+          <p class="field-group date-form-check">
+            <label class="form-label" for="check-out-date">Дата выезда:</label>
+            <input class="field-date" type="text" id="check-out-date" name="check-out-date" placeholder="1 сентября 2021">
+            <button class="button-date" type="button">
+              <span class="visually-hidden">Выбор даты</span>
+            </button>
+            <span class="message">На эти даты есть свободные номера. Пока есть.</span>
+          </p>
+          <div class="wrapper-field-group">
+            <div class="field-group date-form-check">
+              <label class="form-label" for="number-of-adults">Взрослые:</label>
+              <div class="form-counter-wrapper">
+                <button class="button-counter button-minus" type="button">
+                  <span class="visually-hidden">Минус</span>
+                </button>
+                <input class="field-guests" type="text" id="number-of-adults" name="number-of-adults" placeholder="2">
+                <button class="button-counter button-plus" type="button">
+                  <span class="visually-hidden">Плюс</span>
+                </button>
               </div>
             </div>
-            <button class="button-modal" type="submit">Найти</button>
-          </form>
-        </div>
+            <div class="field-group date-form-check">
+              <label class="form-label label-children" for="number-of-children">Дети:</label>
+              <div class="tooltip">
+                <button class="tooltip-toggle" type="button">
+                  <span class="visually-hidden">Информация</span>
+                </button>
+                <p class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+              <div class="form-counter-wrapper">
+                <button class="button-counter button-minus" type="button">
+                  <span class="visually-hidden">Минус</span>
+                </button>
+                <input class="field-guests" type="text" id="number-of-children" name="number-of-children" placeholder="1">
+                <button class="button-counter button-plus" type="button">
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="button-modal" type="submit">Найти</button>
+        </form>
       </div>
     </section>
   </body>
