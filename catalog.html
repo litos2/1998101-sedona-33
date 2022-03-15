@@ -75,7 +75,7 @@
           <div class="catalog-filter-container">
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <!--Фильтр по инфраструктуре-->
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group filter-infrastructure">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
@@ -102,7 +102,7 @@
                 </ul>
               </fieldset>
               <!--Фильтр по типу жилья-->
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group filter-type">
                 <legend class="catalog-filter-title">Тип жилья:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
@@ -129,7 +129,7 @@
                 </ul>
               </fieldset>
               <!--Фильтр по стоимости-->
-                <fieldset class="catalog-filter-group">
+                <fieldset class="catalog-filter-group filter-price">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                   <div class="price-container">
                     <div class="price-input-container">
@@ -315,6 +315,7 @@
           <p class="subscription-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscription-form-catalog" action="https://echo.htmlacademy.ru" method="POST">
             <label class="visually-hidden" for="subscription-email">E-mail</label>
+            <!-- Для состояния невалидности добваить класс input-invalid -->
             <input class="form-input" placeholder="Ваш e-mail" type="email" id="subscription-email" name="subscription-email" required>
             <button class="button subscription-button" type="submit">Подписаться</button>
           </form>
@@ -359,5 +360,67 @@
         </a>
       </footer>
     </div>
+    <!-- Модальное окно -->
+    <section class="modal-container modal-container-close">
+      <div class="modal modal-search-hotels">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <form class="date-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group date-form-check">
+            <label class="form-label" for="check-in-date">Дата заезда:</label>
+            <!-- Для состояния невалидности добавить класс field-date-invalid -->
+            <input class="field-date" type="text" id="check-in-date" name="check-in-date" placeholder="27 апреля 2020">
+            <button class="button-date" type="button">
+              <span class="visually-hidden">Выбор даты</span>
+            </button>
+            <span class="message message-error">Мы не можем отправить вас в прошлое.</span>
+          </p>
+          <p class="field-group date-form-check">
+            <label class="form-label" for="check-out-date">Дата выезда:</label>
+            <!-- Для состояния невалидности добавить класс field-date-invalid -->
+            <input class="field-date" type="text" id="check-out-date" name="check-out-date" placeholder="1 сентября 2021">
+            <button class="button-date" type="button">
+              <span class="visually-hidden">Выбор даты</span>
+            </button>
+            <span class="message">На эти даты есть свободные номера. Пока есть.</span>
+          </p>
+          <div class="wrapper-field-group">
+            <div class="field-group date-form-check">
+              <label class="form-label" for="number-of-adults">Взрослые:</label>
+              <div class="form-counter-wrapper">
+                <button class="button-counter button-minus" type="button">
+                  <span class="visually-hidden">Минус</span>
+                </button>
+                <input class="field-guests" type="text" id="number-of-adults" name="number-of-adults" placeholder="2">
+                <button class="button-counter button-plus" type="button">
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+              </div>
+            </div>
+            <div class="field-group date-form-check">
+              <label class="form-label label-children" for="number-of-children">Дети:</label>
+              <div class="tooltip">
+                <button class="tooltip-toggle" type="button">
+                  <span class="visually-hidden">Информация</span>
+                </button>
+                <p class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+              <div class="form-counter-wrapper">
+                <button class="button-counter button-minus" type="button">
+                  <span class="visually-hidden">Минус</span>
+                </button>
+                <input class="field-guests" type="text" id="number-of-children" name="number-of-children" placeholder="1">
+                <button class="button-counter button-plus" type="button">
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="button-modal" type="submit">Найти</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
