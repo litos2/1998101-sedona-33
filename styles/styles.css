@@ -239,6 +239,7 @@ body {
 .welcome-container {
   background-image: url("../images/background-intro.jpg");
   background-repeat: no-repeat;
+  background-color: #c9dae5;
 }
 
 .welcome-container::after {
@@ -638,7 +639,7 @@ body {
 }
 
 .modal-container-close {
-  /* display: none; */
+  display: none;
 }
 
 .modal {
@@ -1036,8 +1037,8 @@ body {
 }
 
 .filter-type {
-  width: 162px;
-  margin-right: 150px;
+  width: 150px;
+  margin-right: 160px;
 }
 
 .filter-price {
@@ -1046,6 +1047,7 @@ body {
 }
 
 .control {
+  display: block;
   position: relative;
   font-size: 18px;
   line-height: 23px;
@@ -1061,6 +1063,10 @@ body {
   height: 20px;
   background-color: #ffffff;
   outline: none;
+}
+
+.type-of-housing {
+  display: block;
 }
 
 .checkbox-mark {
